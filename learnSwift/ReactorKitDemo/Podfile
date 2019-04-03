@@ -1,0 +1,21 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+use_frameworks!
+
+target 'ReactorKitDemo' do
+
+pod 'RxSwift'
+pod 'RxCocoa'
+pod 'ReactorKit'
+pod 'MBProgressHUD'
+pod 'Alamofire'
+pod 'Moya'
+pod 'Moya/RxSwift'
+pod 'MoyaSugar'
+pod 'MoyaSugar/RxSwift'
+pod 'CocoaLumberjack/Swift'
+pod 'Then'
+
+end
+
