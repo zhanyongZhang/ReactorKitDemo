@@ -8,12 +8,12 @@ target 'ReactorKitDemo' do
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'ReactorKit'
-pod 'MBProgressHUD'
 pod 'Alamofire'
 pod 'Moya'
 pod 'Moya/RxSwift'
 pod 'MoyaSugar'
 pod 'MoyaSugar/RxSwift'
+pod 'MBProgressHUD'
 pod 'CocoaLumberjack/Swift'
 pod 'Then'
 

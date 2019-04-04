@@ -26,7 +26,7 @@ extension GitErrorType {
         
         switch self {
         case .limitRequest:
-            return "请稍后。。。"
+            return "请太频繁。。。"
         case .notReach:
             return "请检查网络。。。"
         case .notKnow:

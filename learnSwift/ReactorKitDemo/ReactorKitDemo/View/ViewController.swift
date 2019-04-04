@@ -62,6 +62,21 @@ class ViewController: UIViewController, View {
                 hud.hide(animated: true, afterDelay: 2)
             }
         }).disposed(by: disposeBag)
+        
+        self.tableView.rx.modelSelected(GitHubRepository.self).subscribe(onNext: {[weak self] item  in
+            
+            self?.alertShow(message: item.name)
+        }).disposed(by: disposeBag)
     }
 }
 
+
+extension ViewController {
+    
+    func alertShow(message:  String){
+        
+        let alertView = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "确认", style: .cancel, handler: nil))
+        self.present(alertView, animated: true, completion: nil)
+    }
+}
