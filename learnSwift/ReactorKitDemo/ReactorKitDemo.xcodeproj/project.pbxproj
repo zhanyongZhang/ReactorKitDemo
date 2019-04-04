@@ -23,6 +23,7 @@
 		9FD8BAB02251FBA500BCBA8B /* ViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD8BAAF2251FBA500BCBA8B /* ViewReactor.swift */; };
 		9FF097E02254C6870047DF9A /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF097DE2254C6860047DF9A /* ModelType.swift */; };
 		9FF097E12254C6870047DF9A /* GitHubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF097DF2254C6860047DF9A /* GitHubModel.swift */; };
+		9FF4491722559E3800FFDE2A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4491622559E3800FFDE2A /* Result.swift */; };
 		E688D8437B5E74E3E175CF90 /* Pods_ReactorKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51256D43AEC8B43AC61DA52 /* Pods_ReactorKitDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		9FD8BAAF2251FBA500BCBA8B /* ViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReactor.swift; sourceTree = "<group>"; };
 		9FF097DE2254C6860047DF9A /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
 		9FF097DF2254C6860047DF9A /* GitHubModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubModel.swift; sourceTree = "<group>"; };
+		9FF4491622559E3800FFDE2A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A51256D43AEC8B43AC61DA52 /* Pods_ReactorKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactorKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B087D4109A881117C9C343E8 /* Pods-ReactorKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactorKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactorKitDemo/Pods-ReactorKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +158,7 @@
 		9FD8BA742251E44400BCBA8B /* ReactorKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9FF4491522559E2300FFDE2A /* Result */,
 				9FF097E32254C6A80047DF9A /* Extension */,
 				9FF097E22254C6900047DF9A /* Service */,
 				9FF097DD2254C64A0047DF9A /* Model */,
@@ -221,6 +224,14 @@
 				9FD8BAAF2251FBA500BCBA8B /* ViewReactor.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9FF4491522559E2300FFDE2A /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				9FF4491622559E3800FFDE2A /* Result.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		C8BD9949D63FDF6B4ABFB6BC /* Pods */ = {
@@ -438,6 +449,7 @@
 				9F1590132253446700316BFA /* Networking.swift in Sources */,
 				9FD8BA782251E44400BCBA8B /* ViewController.swift in Sources */,
 				9FD8BAAE2251F64C00BCBA8B /* Moya+Rx.swift in Sources */,
+				9FF4491722559E3800FFDE2A /* Result.swift in Sources */,
 				9F15900C2253445D00316BFA /* Logger.swift in Sources */,
 				9F1590122253446700316BFA /* AuthPlugin.swift in Sources */,
 				9FD8BAA42251ED1D00BCBA8B /* GitHubAPI.swift in Sources */,

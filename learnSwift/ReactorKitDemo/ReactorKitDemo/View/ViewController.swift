@@ -51,6 +51,17 @@ class ViewController: UIViewController, View {
         reactor.state.map { $0.title }.bind(to: navigationItem.rx.title).disposed(by: disposeBag)
         
         reactor.state.map { !$0.loading }.bind(to: loadingHUD.rx.isHidden).disposed(by: disposeBag)
+        
+        reactor.state.map { $0.lastError }.subscribe(onNext:  {
+            [weak self] error in
+            if let error = error, let view = self?.view {
+                let hud = MBProgressHUD.showAdded(to: view, animated: true)
+                hud.mode = .text
+                hud.label.text = error.errorMessage
+                hud.removeFromSuperViewOnHide = true
+                hud.hide(animated: true, afterDelay: 2)
+            }
+        }).disposed(by: disposeBag)
     }
 }
 

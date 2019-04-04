@@ -18,7 +18,7 @@ class ViewReactor: Reactor {
     enum Mutation {
         case setQuery(String?)
         case setLoading(Bool)
-        case setRepos(GitHubRepositories)
+        case setRepos(GitHubRepositorResult)
     }
     
     struct State {
@@ -36,6 +36,7 @@ class ViewReactor: Reactor {
                 }
             }
         }
+        var lastError: GitErrorType? = nil
     }
     
     let initialState: State
@@ -75,9 +76,18 @@ class ViewReactor: Reactor {
                 state.results = []
                 state.totalCount = 0
             }
-        case .setRepos(let repositories):
-            state.results = repositories.items
-            state.totalCount = repositories.totalCount
+        case .setRepos(let result):
+
+            switch result {
+            case .scueess(let repositories):
+                state.results = repositories.items
+                state.totalCount = repositories.totalCount
+                state.lastError = nil
+            case .failue(let error):
+              state.results = []
+              state.totalCount = 0
+              state.lastError = error
+            }
         }
         return state
     }
